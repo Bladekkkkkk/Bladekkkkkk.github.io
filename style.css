@@ -1,0 +1,345 @@
+
+
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+    }
+
+    .main {
+      width: 100%;
+      height: 100vh;
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(to right, #9c27b0, #8ecdff);
+    }
+
+    nav {
+      width: 80%;
+      position: sticky;
+      margin: 20px auto;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+    }
+
+    .logo {
+      flex-basis: 20%;
+    }
+
+    .logo img {
+      width: 150px;
+    }
+
+    .nav-links {
+      flex: 1;
+      text-align: right;
+    }
+
+    .nav-links ul li {
+      list-style: none;
+      display: inline-block;
+      margin: 0 20px;
+    }
+
+    .nav-links ul li a {
+      color: #fff;
+      text-decoration: none;
+      
+    }
+
+    .information {
+      width: 1000px;
+      height: 1000px;
+      position: absolute;
+      top: 50%;
+      left: -10%;
+      transform: translateY(-50%);
+    }
+
+    #circle {
+      width: 1000px;
+      height: 1000px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      border-radius: 50%;
+      transform: rotate(0deg);
+      transition: 1s;
+    }
+
+    .futuro img {
+      width: 70px;
+    }
+
+    .futuro {
+      position: absolute;
+      display: flex;
+      color: #fff;
+    }
+
+    .futuro div {
+      margin-left: 30px;
+    }
+
+    .futuro div p {
+      margin-top: 8px;
+    }
+
+    .um {
+      top: 450px;
+      right: 50px;
+      font-family: 'Orbit', sans-serif;
+    }
+
+    .dois {
+      top: 150px;
+      left: 350px;
+      transform: rotate(-90deg);
+    }
+
+    .tres {
+      bottom: 450px;
+      left: 50px;
+      transform: rotate(-180deg);
+    }
+
+    .quatro {
+      bottom: 150px;
+      right: 350px;
+      transform: rotate(-270deg);
+    }
+
+    .mobile {
+      width: 200px;
+      position: absolute;
+      top: 50%;
+      left: 35%;
+      transform: translateY(-50%);
+      z-index: 1;
+    }
+
+    .controles {
+      position: absolute;
+      right: 10%;
+      top: 50%;
+      transform: translateY(-50%);
+      text-align: center;
+    }
+
+    .controles h3 {
+      margin: 15px 0;
+      color: #fff;
+    }
+
+    #upBtn {
+      width: 15px;
+      cursor: pointer;
+    }
+
+    #downBtn {
+      width: 15px;
+      cursor: pointer;
+      transform: rotate(180deg);
+    }
+
+    .overlay {
+      width: 0;
+      height: 0;
+      border-top: 500px solid #fff;
+      border-right: 500px solid transparent;
+      border-bottom: 500px solid #fff;
+      border-left: 500px solid #fff;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+
+    .login-form {
+      display: none;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: #fff;
+      padding: 20px;
+      border-radius: 15px;
+      text-align: center;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+    }
+
+    .login-form h3 {
+      margin-bottom: 10px;
+    }
+
+    .login-form input {
+      display: block;
+      padding: 10px;
+      margin-bottom: 5px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+    }
+
+    .login-form button {
+      display: inline-block;
+      padding: 10px 20px;
+      background: #9c27b0;
+      color: #fff;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+
+   .cadas-form {
+      display: none;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: #fff;
+      padding: 20px;
+      border-radius: 15px;
+      text-align: center;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+    }
+
+    .cadas-form h3 {
+      margin-bottom: 10px;
+    }
+
+    .cadas-form input {
+      display: block;
+      padding: 10px;
+      margin-bottom: 5px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+    }
+
+    .cadas-form button {
+      display: inline-block;
+      padding: 10px 20px;
+      background: #9c27b0;
+      color: #fff;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    .contactBtn{
+      background: linear-gradient(to right, #9c27b0, #8ecdff);
+      color: white;
+      padding: 10px 20px;
+      border:otsett;
+      border-color:#07646433;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+      border-radius: 4px;
+      
+    }
+
+    #loginBtn{
+      background: linear-gradient(to right, #9c27b0, #8ecdff);
+      color: white;
+      padding: 10px 20px;
+      border:outsett;
+      border-color:#07646433;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+
+    
+    #homeBtn{
+            background: linear-gradient(to right, #9c27b0, #8ecdff);
+      color: white;
+      padding: 10px 20px;
+      border:outsett;
+      border-color:#07646433;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+      border-radius: 4px
+    }
+
+    #cadaBtn{
+            background: linear-gradient(to right, #9c27b0, #8ecdff);
+      color: white;
+      padding: 10px 20px;
+      border:outsett;
+      border-color:#07646433;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+      border-radius: 4px
+    }
+
+
+
+
+    .contactBtn:hover{
+      background: linear-gradient(to right, #e93595, #d01af4);
+      }
+
+    #loginBtn:hover{
+      background: linear-gradient(to right, #e93595, #d01af4);
+    }
+
+    #homeBtn:hover{
+      background: linear-gradient(to right, #e93595, #d01af4);
+      }
+
+    #cadaBtn:hover{
+      background: linear-gradient(to right, #e93595, #d01af4);
+      }
+
+      #info-box {
+      background-color: #fff;
+      padding: 20px;
+      text-align: center;
+      border-radius: 4px;
+
+    }
+
+    .h2Cont{
+      padding-bottom: 20px;
+    }
+
+    #overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      display: none;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .close{
+      display: inline-block;
+      padding: 10px 20px;
+      background: #9c27b0;
+      color: #fff;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+      margin-top: 10px;
+    }

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="style.css">
+  <title>K6z</title>
+</head>
+
+<body>
+  <div class="main">
+    <nav>
+      <div class="logo">
+        <img src="https://i.ibb.co/NTK8RPf/Logo-TV-2015-svg.png" alt="Logo">
+      </div>
+      <div class="nav-links">
+        <ul>
+          <li><button id="homeBtn">home</button></li>
+          <li><button class="contactBtn" onclick="exibirOverlay()">Contato</button></li>
+          <li><button id="cadaBtn">Cadastrar</button></li>
+          <li><button id="loginBtn">Login</button></li>
+        </ul>
+
+        <div id="overlay">
+          <div id="info-box">
+            <h2 class="h2Cont">Informações de Contato</h2>
+            <p>Email: exemplo@empresa.com</p>
+            <p>Telefone: (00) 1234-5678</p>
+            <p>Endereço: Rua da Empresa, 123, Cidade, Estado</p>
+            <button class="close" onclick="fecharOverlay()">Fechar</button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="information">
+      <div class="overlay"></div>
+      <img src="https://i.ibb.co/9GfqDLj/mobile.png" alt="" class="mobile">
+      <div id="circle">
+        <div class="futuro um">
+          <img src="https://i.ibb.co/fXP6WLf/camera.png">
+          <div>
+            <h1>Camera</h1>
+            <p>12MP, wide Angle lens</p>
+          </div>
+        </div>
+        <div class="futuro dois">
+          <img src="https://i.ibb.co/3WC8vKm/processor.png" alt="Processador">
+          <div>
+            <h1>Processador</h1>
+            <p>SnapDragon Octa-core 11nm</p>
+          </div>
+        </div>
+        <div class="futuro tres">
+          <img src="https://i.ibb.co/pd9VXn4/display.png" alt="Display">
+          <div>
+            <h1>Display</h1>
+            <p>6.5" Mini-Drop Fullscreen</p>
+          </div>
+        </div>
+        <div class="futuro quatro">
+          <img src="https://i.ibb.co/fryNsNc/battery.png" alt="Bateria">
+          <div>
+            <h1>Vida da Bateria</h1>
+            <p>5000mAh, 720Hrs</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="controles">
+      <img src="https://i.ibb.co/GRrFDzD/arrow.png" id="upBtn" alt="Up Arrow">
+      <h3>Futuro</h3>
+      <img src="https://i.ibb.co/GRrFDzD/arrow.png" id="downBtn" alt="Down Arrow">
+    </div>
+    <div class="login-form">
+      <h3>Login</h3>
+      <form>
+        <input type="text" placeholder="Nome de usuário" required>
+        <input type="password" placeholder="Senha" required>
+        <button type="submit">Entrar</button>
+      </form>
+    </div>
+    <div class="cadas-form">
+      <h3>Cadastrar</h3>
+      <form>
+        <input type="text" placeholder="Nome de usuário" required>
+        <input type="password" placeholder="Senha" required>
+        <input type="password" placeholder=" Confirme a senha" required>
+        <button type="submit">Criar</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    var circle = document.getElementById("circle");
+    var upBtn = document.getElementById("upBtn");
+    var downBtn = document.getElementById("downBtn");
+
+    var rotateValue = 0;
+
+    upBtn.onclick = function () {
+      rotateValue -= 90;
+      circle.style.transform = "rotate(" + rotateValue + "deg)";
+    }
+    downBtn.onclick = function () {
+      rotateValue += 90;
+      circle.style.transform = "rotate(" + rotateValue + "deg)";
+    }
+
+    var loginBtn = document.getElementById("loginBtn");
+    var loginForm = document.querySelector(".login-form");
+
+    loginBtn.onclick = function () {
+      loginForm.style.display = "block";
+    }
+
+    loginForm.onsubmit = function (event) {
+      event.preventDefault(); // Impede o envio do formulário
+      loginForm.style.display = "none";
+    }
+
+    var cadaBtn = document.getElementById("cadaBtn");
+    var cadasForm = document.querySelector(".cadas-form");
+
+    cadaBtn.onclick = function () {
+      cadasForm.style.display = "block";
+    }
+
+    cadasForm.onsubmit = function (event) {
+      event.preventDefault(); // Impede o envio do formulário
+      cadasForm.style.display = "none";
+    }
+
+    function exibirOverlay() {
+      var overlay = document.getElementById("overlay");
+      overlay.style.display = "flex";
+    }
+
+    function fecharOverlay() {
+      var overlay = document.getElementById("overlay");
+      overlay.style.display = "none";
+    }
+  </script>
+</body>
+
+</html>
